@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b0b5a00-c0d6-4d43-99df-cc43fc4fe46d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_transaction_jta_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/contact-app.mv.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/rodrigo/contactapp/Application.class" afterPath="$PROJECT_DIR$/build/classes/main/com/rodrigo/contactapp/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/contact-app_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/contact-app_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/contact-app_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/contact-app_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/build/resources/main/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rodrigo/contactapp/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodrigo/contactapp/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     </list>
     <ignored path="contact-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -516,9 +508,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -601,6 +590,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1171,15 +1163,15 @@
       <workItem from="1488670835272" duration="15000" />
       <workItem from="1488671680435" duration="109000" />
       <workItem from="1488725954860" duration="3725000" />
-      <workItem from="1488734851672" duration="3000" />
+      <workItem from="1488736204828" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4148000" />
+    <option name="totallyTimeSpent" value="4156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />

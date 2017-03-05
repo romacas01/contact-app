@@ -24,8 +24,11 @@ public class Application {
             .withEmail("romacas@hotmail.co.uk")
             .withPhone(12345678L)
             .build();
-        System.out.println(contact);
 
+        save(contact);
+    }
+
+    private static void save(Contact contact) {
         //Open session
         Session session = sessionFactory.openSession();
 
