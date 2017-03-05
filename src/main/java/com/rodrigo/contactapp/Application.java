@@ -32,11 +32,29 @@ public class Application {
             .withPhone(12345678L)
             .build();
 
-        save(contact);
-        save(contact2);
+        int id1 = save(contact);
+        int id2 = save(contact2);
 
-        //listContacts().forEach(System.out::println);
-        System.out.println(findById(2));
+        //System.out.println(findById(2));
+        System.out.println("Contacts before the update");
+        listContacts().forEach(System.out::println);
+
+        Contact con = findById(id2);
+        con.setEmail("wwwww150@naver.com");
+
+        System.out.println("Beginning update...");
+        update(con);
+        System.out.println("Update finished.");
+
+        System.out.println("Contacts before the update");
+        listContacts().forEach(System.out::println);
+
+        System.out.println("Beginning delete...");
+        delete(contact);
+        System.out.println("Deleting finished.");
+
+        System.out.println("Contacts after deleting.");
+        listContacts().forEach(System.out::println);
 
     }
 
@@ -61,7 +79,17 @@ public class Application {
         return contacts;
     }
 
-    private static void save(Contact contact) {
+    private static void update(Contact contact) {
+        Session session = sessionFactory.openSession();
+
+        session.beginTransaction();
+        session.update(contact);
+        session.getTransaction().commit();
+
+        session.close();
+    }
+
+    private static int save(Contact contact) {
         //Open session
         Session session = sessionFactory.openSession();
 
@@ -69,12 +97,23 @@ public class Application {
         session.beginTransaction();
 
         //Save the contact
-        session.save(contact);
+        int id = (int) session.save(contact);
 
         //Commit transaction
         session.getTransaction().commit();
 
         //Close session
+        session.close();
+        return id;
+    }
+
+    private static void delete(Contact contact) {
+        Session session = sessionFactory.openSession();
+
+        session.beginTransaction();
+        session.delete(contact);
+        session.getTransaction().commit();
+
         session.close();
     }
 }
