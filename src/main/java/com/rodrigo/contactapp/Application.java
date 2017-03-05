@@ -35,8 +35,16 @@ public class Application {
         save(contact);
         save(contact2);
 
-        listContacts().forEach(System.out::println);
+        //listContacts().forEach(System.out::println);
+        System.out.println(findById(2));
 
+    }
+
+    private static Contact findById(int id) {
+        Session session = sessionFactory.openSession();
+        Contact contact = session.get(Contact.class, id);
+        session.close();
+        return contact;
     }
 
     @SuppressWarnings("unchecked")
