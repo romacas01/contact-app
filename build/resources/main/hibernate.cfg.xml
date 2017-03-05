@@ -10,6 +10,9 @@
         <!-- Create database schema on startup-->
         <property name="hbm2ddl.auto">create</property>
 
+        <!-- Show queries prepared by Hibernate-->
+        <property name="show_sql">true</property>
+
         <!-- Name the annotated entity classes-->
         <mapping class="com.rodrigo.contactapp.model.Contact" />
 
