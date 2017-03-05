@@ -1,9 +1,17 @@
 <hibernate-configuration>
     <session-factory>
+        <!-- Database connection setting-->
         <property name="connection.driver_class">org.h2.Driver</property>
         <property name="connection.url">jdbc:h2:./data/contact-app</property>
 
-        
+        <!-- SQL dialect-->
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Create database schema on startup-->
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- Name the annotated entity classes-->
+        <mapping class="com.rodrigo.contactapp.model.Contact" />
+
     </session-factory>
 </hibernate-configuration>
