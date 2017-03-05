@@ -70,4 +70,36 @@ public class Contact {
           ", phone=" + phone +
           '}';
     }
+
+    public static class ContactBuilder {
+
+        private String firstName;
+        private String lastName;
+        private String email;
+        private Long phone;
+
+        public ContactBuilder(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public ContactBuilder withEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public ContactBuilder withPhone(Long phone) {
+            this.phone = phone;
+            return this;
+        }
+
+        public Contact build() {
+            Contact contact = new Contact();
+            contact.setFirstName(firstName);
+            contact.setLastName(lastName);
+            contact.setEmail(email);
+            contact.setPhone(phone);
+            return contact;
+        }
+    }
 }
