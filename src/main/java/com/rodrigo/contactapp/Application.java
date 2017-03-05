@@ -5,13 +5,12 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
+import com.rodrigo.contactapp.model.Contact;
+import static com.rodrigo.contactapp.model.Contact.*;
 
-/**
- * Created by Rodrigo on 05/03/2017.
- */
 public class Application {
 
-    private static final SessionFactory sessionFactory = buildSessionFactory();
+    //private static final SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
         final ServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
@@ -20,6 +19,10 @@ public class Application {
 
     public static void main(String[] args) {
 
-
+        Contact contact = new ContactBuilder("Rodrigo", "Castro")
+            .withEmail("romacas@hotmail.co.uk")
+            .withPhone(12345678L)
+            .build();
+        System.out.println(contact);
     }
 }
